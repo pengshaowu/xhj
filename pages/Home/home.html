@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .home-box{
+            width: 100%;
+            min-width: 1300px;
+        }
+        .nav{
+            width: 100%;
+            height: 70px;
+            background: #118ab2;
+            position: relative;
+        }
+        .nav ul{
+            display: flex;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nav ul li{
+            width: 103px;
+            height: 70px;
+            color: #fff;
+            list-style: none;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+        }
+        .nav ul li:hover{
+            background: #06c594;;
+        }
+        .carousel{}
+        .about-box{}
+        .select-box{}
+        .project-box{}
+        .reservation-box{}
+        .client-box{}
+        .info-box{}
+        .foot-box{}
+    </style>
+</head>
+<body>
+    <div class="home-box">
+        <div class="nav">
+            <ul>
+                <li>首页</li>
+                <li>路由路线</li>
+                <li>私人定制</li>
+                <li>游记</li>
+                <li>关于我们</li>
+                <li>联系</li>
+            </ul>
+            <input type="text" placeholder="输入搜索关键词">
+        </div>
+        <div class="carousel"></div>
+        <div class="about-box"></div>
+        <div class="select-box"></div>
+        <div class="project-box"></div>
+        <div class="reservation-box"></div>
+        <div class="client-box"></div>
+        <div class="info-box"></div>
+        <div class="foot-box"></div>
+    </div>
+</body>
+<script src="../../js/swiper.min.js"></script>
+<script>
+var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical', // 垂直切换选项
+    loop: true, // 循环模式选项
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })    
+</script>
+</html>
