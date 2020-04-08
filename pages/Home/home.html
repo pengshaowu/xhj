@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,48 +8,621 @@
     <link rel="stylesheet" href="../../css/swiper.min.css">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
-        }
-        .home-box{
-            width: 100%;
-            min-width: 1300px;
-        }
-        .nav{
-            width: 100%;
-            height: 70px;
-            background: #118ab2;
-            position: relative;
-        }
-        .nav ul{
-            display: flex;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .nav ul li{
-            width: 103px;
-            height: 70px;
-            color: #fff;
             list-style: none;
+        }
+
+        .home-box {
+            width: 100%;
+            min-width: 1420px;
+        }
+
+        /* 导航条 */
+        .nav {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            border-top: 2px solid skyblue;
+        }
+
+        .nav ul {
+            display: flex;
+            margin-right: 50px;
+        }
+
+        .nav ul li {
+            width: 103px;
+            height: 80px;
+            color: #666;
             text-align: center;
-            line-height: 70px;
+            line-height: 80px;
             cursor: pointer;
         }
-        .nav ul li:hover{
-            background: #06c594;;
+
+        .nav ul li:first-child {
+            background: #06c594;
+            color: #fff;
         }
-        .carousel{}
-        .about-box{}
-        .select-box{}
-        .project-box{}
-        .reservation-box{}
-        .client-box{}
-        .info-box{}
-        .foot-box{}
+
+        .nav ul li:hover {
+            color: #06c594;
+        }
+
+        .nav ul li:first-child:hover {
+            color: #fff;
+        }
+
+        .nav-input-box {
+            position: relative;
+        }
+
+        .nav input {
+            width: 292px;
+            height: 40px;
+            border-radius: 20px;
+            background: none;
+            border: 1px solid #e5e5e5;
+            text-indent: 16px;
+            outline: none;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav .nav-icon {
+            position: absolute;
+            top: 52%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        /* 轮播图 */
+        .carousel {
+            width: 100%;
+            height: 700px;
+        }
+
+        .carousel .swiper-container {
+            width: 100%;
+            height: 700px;
+        }
+
+        .carousel .swiper-slide {
+            position: relative;
+        }
+
+        .carousel .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .carousel .swiper-slide .nav-msg {
+            position: absolute;
+            top: 185px;
+            left: 25%;
+            transform: translateX(-25%);
+        }
+
+        .nav-msg p:first-child {
+            font-size: 48px;
+            letter-spacing: 9px;
+            color: #fff;
+        }
+
+        .nav-msg p:nth-child(2) {
+            width: 556px;
+            font-size: 18px;
+            color: #fff;
+            line-height: 30px;
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            width: 200px;
+            height: 50px;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 14px;
+            color: #fff;
+            margin-top: 100px;
+            cursor: pointer;
+        }
+
+        /* 关于我们 */
+        .about-box {
+            width: 100%;
+            height: 753px;
+        }
+
+        .about-box .about {
+            width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .about-left {
+            width: 665px;
+        }
+
+        .about-left p {
+            font-size: 18px;
+            color: #666;
+            letter-spacing: 3px;
+        }
+
+        .about-left h1 {
+            margin-bottom: 55px;
+            letter-spacing: 8px;
+        }
+
+        .about-left p:nth-child(2) {
+            margin-bottom: 30px;
+        }
+
+        .about .about-right img {
+            width: 470px;
+            height: 320px;
+        }
+
+        /* 为什么选择我们 */
+        .select-box {
+            width: 100%;
+            height: 683px;
+            background: #118ab2;
+        }
+
+        .select {
+            width: 1300px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .select h1 {
+            color: #fff;
+            letter-spacing: 8px;
+            margin-bottom: 62px;
+        }
+
+        .select .list-box {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .list-box .list {
+            width: 366px;
+        }
+
+        .list-box .list:first-child {
+            margin-bottom: 64px;
+        }
+
+        .list-top {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .list-top p {
+            font-size: 24px;
+            color: #fff;
+            line-height: 30px;
+            margin-left: 20px;
+        }
+
+        .list-bottom {
+            color: #fff;
+            letter-spacing: 5px;
+        }
+
+        /* 项目 */
+        .project-box {
+            width: 100%;
+            height: 750px;
+        }
+
+        .project-box .project {
+            width: 1310px;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            overflow: hidden;
+            padding-bottom: 30px;
+        }
+
+        .project h1 {
+            letter-spacing: 8px;
+            margin-bottom: 60px;
+        }
+
+        .pro-bottom .swiper-container2 {
+            width: 1300px;
+            overflow: hidden;
+        }
+
+        .project .swiper-slide {
+            width: 414px !important;
+            box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.08);
+            transition: box-shadow .3s;
+            cursor: pointer;
+        }
+
+        .project .swiper-slide:hover {
+            box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .project .swiper-slide img {
+            width: 100%;
+            height: 250px;
+            display: block;
+        }
+
+        .project .pro-bottom {
+            width: 392px;
+            padding: 0 19px 0 19px;
+        }
+
+        .pro-bottom p {
+            font-size: 24px;
+            line-height: 80px;
+            color: #06c594;
+            letter-spacing: 5px;
+        }
+
+        .pro-bottom ul {
+            display: flex;
+        }
+
+        .pro-bottom ul li {
+            color: #666;
+            margin-bottom: 26px;
+        }
+
+        .pro-bottom ul li:nth-child(odd) {
+            margin-right: 21px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .swiper-slide .pro-bottom ul li img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .project .swiper-button-prev {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #c2c2c2;
+            position: absolute;
+            top: 23px;
+            left: 1180px;
+            outline: none;
+        }
+
+        .project .swiper-button-next {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #c2c2c2;
+            position: absolute;
+            top: 23px;
+            left: 1247px;
+            outline: none;
+        }
+
+        /* 网上预约 */
+        .reservation-box {
+            width: 100%;
+            height: 800px;
+            background: url("../../images/main.png");
+            background-size: cover;
+            position: relative;
+        }
+
+        .reservation-box .reservation {
+            width: 410px;
+            height: 527px;
+            background: #fff;
+            box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(-10%, -50%);
+            padding: 33px 30px 40px 30px;
+        }
+
+        .reservation h2 {
+            margin-bottom: 30px;
+            letter-spacing: 6px;
+        }
+
+        .reservation .res-img1 {
+            position: absolute;
+            left: 30px;
+            top: 292px;
+        }
+
+        .reservation .res-img2 {
+            position: absolute;
+            left: 250px;
+            top: 292px;
+        }
+
+        .reservation ul {
+            display: flex;
+        }
+
+        .reservation ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .reservation ul li img {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: 9;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .reservation ul li input {
+            width: 411px;
+            height: 50px;
+            text-indent: 37px;
+            border: none;
+            border-bottom: 1px solid #06c594;
+            outline: none;
+        }
+
+        .reservation ul:nth-child(5) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .reservation ul:nth-child(5) li input {
+            width: 190px;
+            outline: none;
+        }
+
+        .reservation ul:nth-child(5) li img {
+            position: none;
+        }
+
+        .reservation textarea {
+            width: 370px;
+            height: 60px;
+            margin-top: 20px;
+            padding: 20px;
+            outline: none;
+            margin-bottom: 30px;
+            resize: none
+        }
+
+        .reservation .res-btn {
+            width: 240px;
+            height: 50px;
+            background-color: #06c594;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* 我们快乐的客户 */
+        .client-box {
+            width: 100%;
+            height: 500px;
+        }
+
+        .client {
+            width: 1300px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .client h1 {
+            letter-spacing: 6px;
+            margin-bottom: 55px;
+        }
+
+        .client .swiper-container3 {
+            width: 1300px;
+            overflow: hidden;
+        }
+
+        .client .swiper-slide {
+            width: 558px !important;
+        }
+
+        .client .swiper-slide p:first-child {
+            height: 44px;
+            font-size: 60px;
+            color: #c2c2c2;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .client .swiper-slide p:nth-child(2) {
+            color: #666;
+            line-height: 30px;
+        }
+
+        .client .user-box {
+            display: flex;
+            margin-top: 60px;
+        }
+
+        .user-box .box-left {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 34px;
+            overflow: hidden;
+        }
+
+        .user-box .box-right p:first-child {
+            font-size: 18px;
+            color: #333;
+            height: auto;
+            line-height: 44px;
+        }
+
+        .user-box .box-right p:last-child {
+            color: #aaa;
+            line-height: 16px;
+        }
+
+        .client .swiper-button-prev {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #c2c2c2;
+            position: absolute;
+            top: 23px;
+            left: 1180px;
+            outline: none;
+        }
+
+        .client .swiper-button-next {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #c2c2c2;
+            position: absolute;
+            top: 23px;
+            left: 1247px;
+            outline: none;
+        }
+
+        .info-box {
+            width: 100%;
+            height: 500px;
+            background: url("../../images/main2.png");
+            background-size: cover;
+            position: relative;
+        }
+
+        .info {
+            width: 326px;
+            height: 390px;
+            background-color: #118ab2;
+            position: absolute;
+            left: 19.5%;
+            transform: translateX(-19.5%);
+            padding: 110px 22px 0 22px;
+        }
+
+        .info ul li {
+            color: #fff;
+        }
+
+        .info ul:nth-child(odd) {
+            display: flex;
+            margin-bottom: 6px;
+        }
+
+        .info ul:nth-child(even) {
+            margin-bottom: 25px;
+        }
+
+        .info ul:nth-child(odd) li:first-child {
+            margin-right: 20px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .info ul:nth-child(even) li {
+            text-indent: 40px;
+        }
+
+        .foot-box {
+            width: 100%;
+            height: 395px;
+            background: #011627;
+        }
+
+        .foot-box .foot {
+            width: 1300px;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .foot .foot-about {
+            width: 400px;
+            margin-right: 50px;
+        }
+
+        .foot .foot-about h2 {
+            color: #fff;
+            margin-bottom: 33px;
+        }
+
+        .foot .foot-about p:nth-child(2) {
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .foot .foot-about p:last-child {
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+        }
+
+        .foot .foot-nav {
+            margin-right: 50px;
+        }
+
+        .foot .foot-nav h2 {
+            color: #fff;
+            margin-bottom: 33px;
+        }
+
+        .foot .foot-nav ul {
+            display: flex;
+        }
+
+        .foot-nav ul li {
+            font-size: 14px;
+            line-height: 32px;
+            color: #06c594;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .foot-nav ul li:hover {
+            color: #fff;
+        }
+
+        .foot-code h2 {
+            color: #fff;
+            margin-bottom: 33px;
+        }
+
+        .foot-code img {
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+        }
     </style>
 </head>
+
 <body>
     <div class="home-box">
         <div class="nav">
@@ -60,39 +634,338 @@
                 <li>关于我们</li>
                 <li>联系</li>
             </ul>
-            <input type="text" placeholder="输入搜索关键词">
+            <div class="nav-input-box">
+                <input type="text" placeholder="输入搜索关键词">
+                <div class="nav-icon"><img src="../../images/icon_arrow_down.png" alt=""></div>
+            </div>
         </div>
-        <div class="carousel"></div>
-        <div class="about-box"></div>
-        <div class="select-box"></div>
-        <div class="project-box"></div>
-        <div class="reservation-box"></div>
-        <div class="client-box"></div>
-        <div class="info-box"></div>
-        <div class="foot-box"></div>
+        <div class="carousel">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../images/header.png" alt="">
+                        <div class="nav-msg">
+                            <p>需要换个新造型吗？</p>
+                            <p>流沙包医生让你的外表与内心的能量和活力和谐一致。通过先进的皮肤再生和身体轮廓治疗，恢复年轻的轮廓和恢复疲劳的皮肤。</p>
+                            <div class="nav-btn">阅读更多</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><img src="../../images/header.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../../images/header.png" alt=""></div>
+                </div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="about-box">
+            <div class="about">
+                <div class="about-left">
+                    <h1>关于我们</h1>
+                    <p>如果你正在考虑做整形手术，选择合适的外科医生将是你要做的最重要的决定。委员会认证的整形外科医生朱利安·丹尼斯博士，被认为是纽约大道首屈一指的外科医生之一，拥有超过20年的私人执业经验。病人经常选择丹尼斯医生，因为他以同情、诚实、专业和高道德标准而闻名。</p>
+                    <p>
+                        他还结合了友好，放松的床边态度与温和细致的外科技术。想要在整形手术领域获得真正独特的体验，请做出正确的选择，选择丹尼斯医生为您的整形手术。</p>
+                </div>
+                <div class="about-right">
+                    <img src="../../images/header.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="select-box">
+            <div class="select">
+                <h1>为什么选择我们？</h1>
+                <div class="list-box">
+                    <div class="list">
+                        <div class="list-top">
+                            <img src="../../images/icon1.png" alt="">
+                            <p>这里是文字标题这里是文字标题</p>
+                        </div>
+                        <div class="list-bottom">这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容</div>
+                    </div>
+                    <div class="list">
+                        <div class="list-top">
+                            <img src="../../images/icon1.png" alt="">
+                            <p>这里是文字标题这里是文字标题</p>
+                        </div>
+                        <div class="list-bottom">这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容</div>
+                    </div>
+                    <div class="list">
+                        <div class="list-top">
+                            <img src="../../images/icon1.png" alt="">
+                            <p>这里是文字标题这里是文字标题</p>
+                        </div>
+                        <div class="list-bottom">这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容</div>
+                    </div>
+                    <div class="list">
+                        <div class="list-top">
+                            <img src="../../images/icon1.png" alt="">
+                            <p>这里是文字标题这里是文字标题</p>
+                        </div>
+                        <div class="list-bottom">这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容</div>
+                    </div>
+                    <div class="list">
+                        <div class="list-top">
+                            <img src="../../images/icon1.png" alt="">
+                            <p>这里是文字标题这里是文字标题</p>
+                        </div>
+                        <div class="list-bottom">这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容</div>
+                    </div>
+                    <div class="list">
+                        <div class="list-top">
+                            <img src="../../images/icon1.png" alt="">
+                            <p>这里是文字标题这里是文字标题</p>
+                        </div>
+                        <div class="list-bottom">这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容这里是文字内容</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="project">
+                <h1>满足我们的项目</h1>
+                <div class="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../../images/header.png" alt="">
+                            <div class="pro-bottom">
+                                <p>这里是文字标题</p>
+                                <ul>
+                                    <li><img src="../../images/icon_user.png" alt=""></li>
+                                    <li>这里是用户名称</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_phone.png" alt=""></li>
+                                    <li>这里是联系方式</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_time.png" alt=""></li>
+                                    <li>这里是上班时间</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../images/header.png" alt="">
+                            <div class="pro-bottom">
+                                <p>这里是文字标题</p>
+                                <ul>
+                                    <li><img src="../../images/icon_user.png" alt=""></li>
+                                    <li>这里是用户名称</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_phone.png" alt=""></li>
+                                    <li>这里是联系方式</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_time.png" alt=""></li>
+                                    <li>这里是上班时间</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../images/header.png" alt="">
+                            <div class="pro-bottom">
+                                <p>这里是文字标题</p>
+                                <ul>
+                                    <li><img src="../../images/icon_user.png" alt=""></li>
+                                    <li>这里是用户名称</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_phone.png" alt=""></li>
+                                    <li>这里是联系方式</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_time.png" alt=""></li>
+                                    <li>这里是上班时间</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../../images/header.png" alt="">
+                            <div class="pro-bottom">
+                                <p>这里是文字标题</p>
+                                <ul>
+                                    <li><img src="../../images/icon_user.png" alt=""></li>
+                                    <li>这里是用户名称</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_phone.png" alt=""></li>
+                                    <li>这里是联系方式</li>
+                                </ul>
+                                <ul>
+                                    <li><img src="../../images/icon_time.png" alt=""></li>
+                                    <li>这里是上班时间</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="reservation-box">
+            <div class="reservation">
+                <h2>网上预约</h2>
+                <ul>
+                    <li><img src="../../images/icon_name.png" alt=""></li>
+                    <li><input type="text" placeholder="姓名"></li>
+                </ul>
+                <ul>
+                    <li><img src="../../images/icon_phone.png" alt=""></li>
+                    <li><input type="text" placeholder="电话"></li>
+                </ul>
+                <ul>
+                    <li><img src="../../images/icon_team.png" alt=""></li>
+                    <li><input type="text" placeholder="团队"></li>
+                </ul>
+                <ul>
+                    <li><input type="text" placeholder="日历"></li>
+                    <li><input type="text" placeholder="时间"></li>
+                </ul>
+                <ul>
+                    <li><textarea placeholder="你的信息" cols="30" rows="10"></textarea></li>
+                </ul>
+                <div class="res-img1"><img src="../../images/icon_date.png" alt=""></div>
+                <div class="res-img2"><img src="../../images/icon_time.png" alt=""></div>
+                <div class="res-btn">预约</div>
+            </div>
+        </div>
+        <div class="client-box">
+            <div class="client">
+                <h1>我们快乐的客户</h1>
+                <div class="swiper-container3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>“</p>
+                            <p>当我决定要做妈妈的大变身时，我研究了医生和这个过程和程序很长时间。总而言之，我采访了9位评分最高的整形外科医生，他们的评价都很好。</p>
+                            <div class="user-box">
+                                <div class="box-left"><img src="../../images/header.png" alt=""></div>
+                                <div class="box-right">
+                                    <p>流沙包</p>
+                                    <p>首席UI设计师</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>“</p>
+                            <p>当我决定要做妈妈的大变身时，我研究了医生和这个过程和程序很长时间。总而言之，我采访了9位评分最高的整形外科医生，他们的评价都很好。</p>
+                            <div class="user-box">
+                                <div class="box-left"><img src="../../images/header.png" alt=""></div>
+                                <div class="box-right">
+                                    <p>流沙包</p>
+                                    <p>首席UI设计师</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>“</p>
+                            <p>当我决定要做妈妈的大变身时，我研究了医生和这个过程和程序很长时间。总而言之，我采访了9位评分最高的整形外科医生，他们的评价都很好。</p>
+                            <div class="user-box">
+                                <div class="box-left"><img src="../../images/header.png" alt=""></div>
+                                <div class="box-right">
+                                    <p>流沙包</p>
+                                    <p>首席UI设计师</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info">
+                <ul>
+                    <li><img src="../../images/icon_pin.png" alt=""></li>
+                    <li>办公室</li>
+                </ul>
+                <ul>
+                    <li>纽约第八大道620号 邮编10018</li>
+                </ul>
+                <ul>
+                    <li><img src="../../images/icon_phone2.png" alt=""></li>
+                    <li>今天打电话给我们</li>
+                </ul>
+                <ul>
+                    <li>798-818-8965</li>
+                </ul>
+                <ul>
+                    <li><img src="../../images/icon_email.png" alt=""></li>
+                    <li>电子邮箱</li>
+                </ul>
+                <ul>
+                    <li>wocao@ucse.com</li>
+                </ul>
+                <ul>
+                    <li><img src="../../images/icon_clock.png" alt=""></li>
+                    <li>开放时间</li>
+                </ul>
+                <ul>
+                    <li>营业：上午8时至下午5时</li>
+                    <li>周末：关闭</li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot-box">
+            <div class="foot">
+                <div class="foot-about">
+                    <h2>关于我们</h2>
+                    <p>以良好的床边服务和个性化的护理，我们的认证整形外科医生丹尼斯博士和他知识渊博的团队，提供了一个全面和信息丰富的咨询，并将回答任何问题的术前和术后预约。</p>
+                    <p>虽然所有的手术都不是在这个办公室进行的，但丹尼斯医生在许多知名的当地医院和门诊手术中心享有医疗特权。</p>
+                </div>
+                <div class="foot-nav">
+                    <h2>链接</h2>
+                    <ul>
+                        <li>首页</li>
+                        <li>关于我们</li>
+                        <li>博客</li>
+                        <li>常见问题解答</li>
+                        <li>联系我们</li>
+                        <li>相片画廊</li>
+                        <li>奖状</li>
+                    </ul>
+                </div>
+                <div class="foot-code">
+                    <h2>请选择你的支付方式</h2>
+                    <div class="foot-img">
+                        <img src="../../images/zfb.jpg" alt="">
+                        <img src="../../images/wx.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="../../js/swiper.min.js"></script>
 <script>
-var mySwiper = new Swiper ('.swiper-container', {
-    direction: 'vertical', // 垂直切换选项
-    loop: true, // 循环模式选项
-    
-    // 如果需要分页器
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    
-    // 如果需要前进后退按钮
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    
-    // 如果需要滚动条
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  })    
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true, // 循环模式选项
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+    var mySwiper = new Swiper('.swiper-container2', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
+    var mySwiper = new Swiper('.swiper-container3', {
+        slidesPerView: 2,
+        spaceBetween: 184,
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    })
 </script>
+
 </html>
