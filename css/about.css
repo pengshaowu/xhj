@@ -1,0 +1,95 @@
+.about-box {
+    width: 100%;
+    min-width: 1420px;
+}
+
+.nav ul li:nth-child(5) {
+    background: #06c594;
+}
+
+.nav ul li:nth-child(5) a {
+    color: #fff;
+}
+
+.nav ul li:nth-child(5):hover a {
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+}
+
+.header img {
+    width: 100%;
+    display: block;
+}
+
+.main-box {
+    width: 100%;
+    padding-top: 85px;
+}
+
+.main-box .firm-info {
+    width: 1300px;
+    margin: 0 auto 70px auto;
+    display: flex;
+}
+
+.firm-info .info-sidebar {
+    width: 300px;
+    margin-top: 6px;
+}
+
+.info-sidebar ul li {
+    color: #333;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.info-sidebar ul:first-child li:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    color: #333;
+    cursor: default;
+}
+
+.info-sidebar ul li.active {
+    color: #06c594;
+}
+
+.firm-info .info {
+    width: 770px;
+}
+
+.info h1 {
+    font-weight: 48px;
+    color: #333;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+}
+
+.info p {
+    color: #666;
+    line-height: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 27px;
+}
+
+.qygs,
+.lswh,
+.wmdsm,
+.wsmdjzg,
+.zl {
+    margin-bottom: 55px;
+}
+
+.info ul {
+    margin-left: 20px;
+}
+
+.info ul li {
+    color: #666;
+    line-height: 50px;
+    list-style: disc;
+}

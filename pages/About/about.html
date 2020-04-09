@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="../../css//about.css">
     <title>Document</title>
     <style>
         * {
@@ -14,102 +15,6 @@
             padding: 0;
             list-style: none;
             text-decoration: none;
-        }
-
-        .about-box {
-            width: 100%;
-            min-width: 1420px;
-        }
-
-        .nav ul li:nth-child(5) {
-            background: #06c594;
-        }
-
-        .nav ul li:nth-child(5) a {
-            color: #fff;
-        }
-
-        .nav ul li:nth-child(5):hover a {
-            color: #fff;
-        }
-
-        .header {
-            width: 100%;
-        }
-
-        .header img {
-            width: 100%;
-            display: block;
-        }
-
-        .main-box {
-            width: 100%;
-            padding-top: 85px;
-        }
-
-        .main-box .firm-info {
-            width: 1300px;
-            margin: 0 auto 70px auto;
-            display: flex;
-        }
-
-        .firm-info .info-sidebar {
-            width: 300px;
-            margin-top: 6px;
-        }
-
-        .info-sidebar ul li {
-            color: #333;
-            margin-bottom: 30px;
-            cursor: pointer;
-        }
-
-        .info-sidebar ul:first-child li:first-child {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 6px;
-            color: #333;
-            cursor: default;
-        }
-
-        .info-sidebar ul li.active {
-            color: #06c594;
-        }
-
-        .firm-info .info {
-            width: 770px;
-        }
-
-        .info h1 {
-            font-weight: 48px;
-            color: #333;
-            letter-spacing: 6px;
-            margin-bottom: 30px;
-        }
-
-        .info p {
-            color: #666;
-            line-height: 30px;
-            letter-spacing: 3px;
-            margin-bottom: 27px;
-        }
-
-        .qygs,
-        .lswh,
-        .wmdsm,
-        .wsmdjzg,
-        .zl {
-            margin-bottom: 55px;
-        }
-
-        .info ul {
-            margin-left: 20px;
-        }
-
-        .info ul li {
-            color: #666;
-            line-height: 50px;
-            list-style: disc;
         }
     </style>
 </head>
@@ -123,7 +28,7 @@
                 <li><a href="">私人定制</a></li>
                 <li><a href="">游记</a></li>
                 <li><a href="">关于我们</a></li>
-                <li><a href="">联系</a></li>
+                <li><a href="../Contact/contact.html">联系</a></li>
             </ul>
             <div class="nav-input-box">
                 <input type="text" placeholder="输入搜索关键词">
@@ -218,68 +123,5 @@
         </div>
     </div>
 </body>
-<script>
-    var li2 = document.getElementById('li2');
-    var li3 = document.getElementById('li3');
-    var li4 = document.getElementById('li4');
-    var li5 = document.getElementById('li5');
-    var li6 = document.getElementById('li6');
-    function handleLi2() {
-        li2.className = 'active';
-        li3.className = '';
-        li4.className = '';
-        li5.className = '';
-        li6.className = '';
-        window.scrollTo(0,740);
-    }
-    function handleLi3() {
-        li2.className = '';
-        li3.className = 'active';
-        li4.className = '';
-        li5.className = '';
-        li6.className = '';
-        window.scrollTo(0,1282);
-    }
-    function handleLi4() {
-        li2.className = '';
-        li3.className = '';
-        li4.className = 'active';
-        li5.className = '';
-        li6.className = '';
-        window.scrollTo(0,1767);
-    }
-    function handleLi5() {
-        li2.className = '';
-        li3.className = '';
-        li4.className = '';
-        li5.className = 'active';
-        li6.className = '';
-        window.scrollTo(0,1985);
-    }
-    function handleLi6() {
-        li2.className = '';
-        li3.className = '';
-        li4.className = '';
-        li5.className = '';
-        li6.className = 'active';
-        window.scrollTo(0,1985);
-    }
-    window.addEventListener("scroll", this.handleScroll, true);
-    function handleScroll() {
-        var top = Math.ceil(document.documentElement.scrollTop || document.body.scrollTop);
-        console.log(top);
-        var nav = document.getElementById("nav");
-        var info = document.getElementById('info');
-        if(top >= 740){
-            nav.style.position = 'fixed';
-            nav.style.top = 30+'px';
-            info.style.marginLeft = 300+'px';
-        }else if(top < 740){
-            nav.style.position = 'relative';
-            nav.style.top = '0'
-            info.style.marginLeft = 0;
-        }
-    }
-</script>
-
+<script src="../../js/about.js"></script>
 </html>

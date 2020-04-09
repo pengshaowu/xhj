@@ -1,0 +1,139 @@
+.nav ul li:nth-child(6) {
+    background: #06c594;
+}
+
+.nav ul li:nth-child(6) a {
+    color: #fff;
+}
+
+.nav ul li:nth-child(6):hover a {
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+}
+
+.header img {
+    width: 100%;
+}
+
+.info-box {
+    width: 1300px;
+    margin: 50px auto 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-left {
+    width: 297px;
+}
+
+.info-left ul li {
+    list-style: none;
+}
+
+.info-left ul li:first-child {
+    font-size: 18px;
+    color: #393d3f;
+    line-height: 40px;
+}
+
+.info-left ul li:last-child {
+    color: #666666;
+    line-height: 24px;
+}
+
+.info-left ul:nth-child(2) {
+    margin: 50px 0;
+}
+
+.info-right {
+    width: 740px;
+    height: 300px;
+}
+
+.info-right p {
+    color: #393d3f;
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 32px;
+}
+
+.contact-right {
+    width: 738px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.contact-info input {
+    width: 230px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+    background: none;
+    outline: none;
+    color: #000;
+}
+
+.contact-content {
+    margin-bottom: 36px;
+}
+
+.contact-content textarea {
+    width: 736px;
+    height: 72px;
+    background: none;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid #dddddd;
+    outline: none;
+    color: #000;
+}
+
+.contact-btn {
+    display: flex;
+}
+
+.contact-btn button {
+    width: 360px;
+    height: 50px;
+    border: none;
+    outline: none;
+}
+
+.contact-btn button:first-child {
+    background: #fff;
+    color: #989898;
+    border: 1px solid #dddddd;
+    margin-right: 16px;
+    transition: background 0.3s;
+}
+
+.contact-btn button:first-child:hover {
+    background: #06c594;
+    color: #fff;
+}
+
+.contact-btn button:last-child {
+    background: #fff;
+    color: #989898;
+    border: 1px solid #dddddd;
+    transition: background 0.3s;
+}
+
+.contact-btn button:last-child:hover {
+    background: #06c594;
+    color: #fff;
+}
+.map-box{
+    width: 1300px;
+    margin: 0px auto 150px;
+}
+.map-box img{
+    width: 1300px;
+}
