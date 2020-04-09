@@ -1,0 +1,54 @@
+/* 导航条 */
+.nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid skyblue;
+}
+
+.nav ul {
+    display: flex;
+    margin-right: 50px;
+}
+
+.nav ul li {
+    width: 103px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+}
+.nav ul li a{
+    color: #666;
+}
+
+
+.nav ul li:hover a {
+    color: #06c594;
+}
+
+
+.nav-input-box {
+    position: relative;
+}
+
+.nav input {
+    width: 292px;
+    height: 40px;
+    border-radius: 20px;
+    background: none;
+    border: 1px solid #e5e5e5;
+    text-indent: 16px;
+    outline: none;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav .nav-icon {
+    position: absolute;
+    top: 52%;
+    right: 20px;
+    transform: translateY(-50%);
+}
